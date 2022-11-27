@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="main.js"></script>
+    <title>MENU</title>
+</head>
+<body>
+    <div class="cabeça">
+        <div class="titulo">
+            <div class="gambiarra-titulo-undertale"><img src="undertale-title.png" class="undertale"></div>
+            <div class="gambiarra-titulo-undertale"><img src="the-final-title.png"></div>
+            <div class="gambiarra-titulo-undertale"><img src="chaus-title.png"></div>
+        </div>
+    </div>
+    <div class="corpo">
+        <div class="opcoes">
+            <div class="botao"> <div><img src="lv.png" class="lv"> <div class="text-btn">jogar</div></div></div>
+            <div class="botao"> <div><img src="lv.png" class="lv"> <div class="text-btn">resetar</div></div></div>
+            <div class="botao"> <div><img src="lv.png" class="lv"> <button class="text-btn" id="tocarAudio">audio:off</button></div></div>
+            <div class="botao"> <div><img src="lv.png" class="lv"> <div class="text-btn">créditos</div></div></div>
+        </div>
+        <div class="imagens">
+            <img src="ITEVEE.png" alt="=)">
+        </div>
+    </div>
+    <audio type="audio/mpeg" src="main_theme.mp3" loop></audio>
+    <script>
+        var musica = false
+        const button = document.querySelector('button')
+        button.addEventListener('click',function(){
+            const audio = document.querySelector('audio')
+            if(musica===false){
+                audio.currentTime = 0;
+                audio.play();
+                document.getElementById("tocarAudio").innerHTML = "audio:on";
+                musica = true;
+            } else {
+                audio.pause();
+                document.getElementById("tocarAudio").innerHTML = "audio:off";
+                musica = false;
+            }
+        })
+    </script>
+</body>
+</html>

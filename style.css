@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@keyframes titulo {
+    from{
+        height: 50px;
+    }
+    to{
+        height: 70px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    background-color: black;
+}
+
+.cabeça {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+.titulo {
+    animation-name: titulo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+.gambiarra-titulo-undertale {
+    justify-content: center;
+    display: flex;
+}
+.undertale {
+    justify-content: center;
+    display: flex;
+}
+.corpo {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.opcoes {
+    width: 100vw;
+    height: 50vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+.imagens {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.botao {
+    position: relative;
+    left: 30px;
+    color: azure;
+    transition: 150ms linear;
+}
+.botao:hover {
+    left: 60px;
+    transition: 100ms linear; 
+}
+.botao:hover .text-btn {
+    color: #ffff00;
+    left: 60px;
+    font-size: 45px;
+    transition: 100ms linear; 
+}
+.lv {
+    display: none;
+    transition: 150ms linear;
+}
+.botao:hover .lv {
+    display: block;
+    float: left;
+    padding: 3px;
+}
+button {
+    color: white;
+}
